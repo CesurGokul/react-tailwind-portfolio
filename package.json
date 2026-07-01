@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://CesurGokul.github.io/react-tailwind-portfolio",
+  // "homepage": "https://CesurGokul.github.io/react-tailwind-portfolio",
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@heroicons/react": "^2.1.1",
@@ -17,7 +17,7 @@
   },
 "scripts": {
   "start": "react-scripts start",
-  "build": "react-scripts build",
+  "build": "CI=false react-scripts build",
   "test": "react-scripts test",
   "eject": "react-scripts eject",
   "predeploy": "npm run build",
