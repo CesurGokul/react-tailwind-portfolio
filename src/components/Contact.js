@@ -3,7 +3,7 @@ import emailjs from '@emailjs/browser';
 import { useLanguage } from '../context/LanguageContext';
 
 export default function Contact() {
-    const { t, language } = useLanguage();
+    const { t } = useLanguage();
     const form = useRef();
 
     const [formData, setFormData] = useState({
