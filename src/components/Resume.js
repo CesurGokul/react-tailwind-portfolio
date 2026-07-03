@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import ResumeImg from '../assets/resume.jpg';
-import EnglishResumePDF from '../assets/Gokul_Resume_English.pdf';
+import EnglishResumePDF from '../assets/Gokul English resume.pdf';
 import JapaneseResumePDF from '../assets/ゴクル.履歴書.pdf';
 
 export default function Resume() {
