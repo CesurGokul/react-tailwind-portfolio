@@ -104,7 +104,7 @@ export const translations = {
             greeting: 'こんにちは、私は',
             name: 'ゴクル',
             title: 'フルスタック開発者',
-            description: 'バイリンガルサポートを活かし、確かな違いを生む優れたデジタル体験を構築します。',
+            description: 'バイリンガル開発プロジェクトに貢献し、ビジネスに確かな価値をもたらします。',
             seeProjects: 'プロジェクトを見る'
         },
         about: {
@@ -171,7 +171,7 @@ export const translations = {
             availabilityHours: "月 - 金: 午前9時 - 午後6時"
         },
         footer: {
-            description: "コードで文化を架け橋する。英語と日本語のバイリンガルフルスタック開発者として、シームレスで洗練されたデジタル体験を創造します。",
+            description: "バイリンガルフルスタック開発者として高品質なコードでビジネスに確かな価値をもたらすデジタル体験を創り出します",
             quickLinks: "クイックリンク",
             location: "大阪、日本",
             rights: "全著作権所有"
