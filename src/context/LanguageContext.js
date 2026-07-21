@@ -25,7 +25,8 @@ export const translations = {
             titlePart2: 'Me',
             description: 'With over 3 years of experience in Bilingual Support Project and full-stack development, I specialize in React, Node.js, Java, and MySQL. I am committed to writing clean, maintainable code and creating exceptional user experiences, leveraging my bilingual capabilities in English and Japanese (JLPT N2).',
             yearsExperience: 'Years Experience',
-            projectsCompleted: 'Projects Completed'
+            projectsCompleted: 'Projects Completed',
+            techStack: 'Tech Stack',
         },
         resume: {
             title: 'Resume',
@@ -112,7 +113,8 @@ export const translations = {
             titlePart2: 'について',
             description: 'バイリンガルサポートプロジェクトおよびフルスタック開発において3年以上の経験を持ち、React、Node.js、Java、MySQLを専門としています。クリーンで保守性の高いコードの作成と卓越したユーザー体験の創造に尽力しており、英語と日本語（JLPT N2）のバイリンガル能力を最大限に活かしています。',
             yearsExperience: '年の経験',
-            projectsCompleted: '完了したプロジェクト'
+            projectsCompleted: '完了したプロジェクト',
+            techStack: '技術スタック',
         },
         resume: {
             title: '履歴書',
