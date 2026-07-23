@@ -2,21 +2,22 @@ import { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import ResumeImg from '../assets/resume.jpg';
 import EnglishResumePDF from '../assets/Gokul English resume.pdf';
-import JapaneseResumePDF from '../assets/ゴクル.履歴書.pdf';
+import JapaneseResumeExcel from '../assets/ゴクル.履歴書.xlsx';
 
 export default function Resume() {
     const [showModal, setShowModal] = useState(false);
     const { t } = useLanguage();
 
-    const handleDownload = (pdfFile, fileName) => {
-        const link = document.createElement('a');
-        link.href = pdfFile;
-        link.download = fileName;
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-        setTimeout(() => setShowModal(false), 300);
-    };
+   const handleDownload = (file, fileName) => {
+    const link = document.createElement('a');
+    link.href = file;
+    link.download = fileName;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    setTimeout(() => setShowModal(false), 300);
+};
 
     return (
         <section id='resume' className='py-20 bg-slate-50'>
@@ -74,18 +75,43 @@ export default function Resume() {
                                 </svg>
                             </button>
 
-                            <button onClick={() => handleDownload(JapaneseResumePDF, 'ゴクル.履歴書.pdf')} className='w-full flex items-center justify-between p-4 rounded-xl border border-gray-200 hover:border-purple-500 hover:bg-purple-50 transition-all duration-200 group'>
-                                <div className='flex items-center gap-3'>
-                                    <span className='text-2xl'>🇯🇵</span>
-                                    <div className='text-left'>
-                                        <div className='font-semibold text-gray-900 group-hover:text-purple-700'>{t.resume.japaneseResume}</div>
-                                        <div className='text-xs text-gray-500'>{t.resume.pdfDocumentJa}</div>
-                                    </div>
-                                </div>
-                                <svg className='w-5 h-5 text-gray-400 group-hover:text-purple-600 transition-colors' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
-                                    <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4' />
-                                </svg>
-                            </button>
+                            <button
+    onClick={() =>
+        handleDownload(
+            JapaneseResumeExcel,
+            'ゴクル.履歴書.xlsx'
+        )
+    }
+    className='w-full flex items-center justify-between p-4 rounded-xl border border-gray-200 hover:border-purple-500 hover:bg-purple-50 transition-all duration-200 group'
+>
+    <div className='flex items-center gap-3'>
+        <span className='text-2xl'>🇯🇵</span>
+
+        <div className='text-left'>
+            <div className='font-semibold text-gray-900 group-hover:text-purple-700'>
+                {t.resume.japaneseResume}
+            </div>
+
+            <div className='text-xs text-gray-500'>
+                Excel Document (.xlsx)
+            </div>
+        </div>
+    </div>
+
+    <svg
+        className='w-5 h-5 text-gray-400 group-hover:text-purple-600 transition-colors'
+        fill='none'
+        stroke='currentColor'
+        viewBox='0 0 24 24'
+    >
+        <path
+            strokeLinecap='round'
+            strokeLinejoin='round'
+            strokeWidth={2}
+            d='M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4'
+        />
+    </svg>
+</button>
                         </div>
 
                         <button onClick={() => setShowModal(false)} className='mt-6 w-full bg-gray-50 hover:bg-gray-100 text-gray-700 font-medium py-3 px-4 rounded-xl transition-colors duration-200 border border-gray-200'>
